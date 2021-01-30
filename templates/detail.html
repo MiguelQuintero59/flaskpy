@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <main>
+        <section>
+            {% if pelicula %}
+                <img src = "https://image.tmdb.org/t/p/w500/{{pelicula.poster_path }}" style = 'width:150px;height:250px;' alt="{{ pelicula.title }}"></a></button>
+                <p>{{ pelicula.vote_average }}</p>
+                <p>{{ pelicula.original_language }}</p>
+                <p>{{ pelicula.popularity }}</p>
+                <p>{{ pelicula.overview }}</p>
+                <h2>{{ pelicula.title }}</h2>
+            {% endif %}
+        </section>
+    </main>>
+    <button><a href="/">Volver al home</a></button>
+{% endblock%}

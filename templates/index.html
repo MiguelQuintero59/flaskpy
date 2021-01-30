@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+<h1>{% block title %} Home Page Top 10 Movies {% endblock %}</h1>
+{% block content %}
+    {% for pelicula in datos %}
+        <section>
+          <button class="button"><a href="/profile/{{pelicula.id}}"> <img src = "https://image.tmdb.org/t/p/w500/{{pelicula.poster_path }}" style = 'width:150px;height:250px;' alt="{{ pelicula.title }}"></a></button>
+          <h2>{{ pelicula.vote_average }}</h2>
+           <h3> </h3>
+          <h2>{{ pelicula.title }}</h2>
+        </section>
+    {% endfor %}
+{% endblock%}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This is the Index Page</title>
+    </head>
+     <body>
+        {% for pelicula in datos %}
+        <section>
+          <img src = "https://image.tmdb.org/t/p/w500/{{pelicula.poster_path }}" style = 'width:150px;height:250px;' >
+          <h2>{{ pelicula.title }}</h2>
+
+        </section>
+        {% endfor %}
+    </body>
+</html>
+
